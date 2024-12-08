@@ -5,8 +5,20 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import static processing.core.PConstants.MULTIPLY;
+
 public final class Parameters {
     public static final long SEED = 11;
+    public static final int WIDTH = 1000;
+    public static final int HEIGHT = 1000;
+    public static final int MARGIN = 100;
+    public static final int STEP = 10;
+    public static final int MAX_LENGTH = 500;
+    public static final float NOISE_SCALE = .01f;
+    public static final float NOISE_STRENGTH = .25f;
+    public static final Color BACKGROUND_COLOR = new Color("EAE5D3");
+    public static final Color STROKE_COLOR = new Color(50, 25, 25, 25);
+    public static final int BLEND_MODE = MULTIPLY;
 
     /**
      * Helper method to extract the constants in order to save them to a json file
@@ -17,7 +29,7 @@ public final class Parameters {
         Map<String, Object> map = new HashMap<>();
 
         Field[] declaredFields = Parameters.class.getDeclaredFields();
-        for(Field field : declaredFields) {
+        for (Field field : declaredFields) {
             field.setAccessible(true);
             map.put(field.getName(), field.get(Parameters.class));
         }
@@ -25,7 +37,7 @@ public final class Parameters {
         return Collections.singletonMap(Parameters.class.getSimpleName(), map);
     }
 
-    public record Color (float red, float green, float blue, float alpha) {
+    public record Color(float red, float green, float blue, float alpha) {
         public Color(float red, float green, float blue) {
             this(red, green, blue, 255);
         }

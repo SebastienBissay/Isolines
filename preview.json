@@ -1,1 +1,1 @@
-{"Parameters":{"SEED":11}}
+{"Parameters":{"MARGIN":100,"STROKE_COLOR":{"red":50.0,"green":25.0,"blue":25.0,"alpha":25.0},"SEED":11,"WIDTH":1000,"STEP":10,"HEIGHT":1000,"NOISE_SCALE":0.01,"MAX_LENGTH":500,"BLEND_MODE":128,"BACKGROUND_COLOR":{"red":234.0,"green":229.0,"blue":211.0,"alpha":255.0}}}
